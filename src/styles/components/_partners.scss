@@ -1,0 +1,43 @@
+.ml-partners {
+
+  &__content {
+    margin: rem(30) auto;
+  }
+
+  &__title {
+    margin: 0 auto;
+    max-width: rem(860);
+  }
+
+  &__list {
+    margin: rem(60) rem(50);
+    text-align: center;
+  }
+
+  &__item {
+    display: inline-block;
+    margin: rem(25);
+    vertical-align: middle;
+
+    &__logo {
+      display: inline-block;
+      height: rem(45);
+
+      &--small {
+        height: rem(25);
+      }
+
+      &--medium {
+        height: rem(60);
+      }
+
+      &--large {
+        height: rem(70);
+      }
+
+      svg {
+        height: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+@mixin screenSize($media) {
+
+  @if $media == highres {
+    @media screen and (min-width: map-get($breakpoint, "high_1")) {
+      @content;
+    }
+  } @else if $media == midres {
+    @media screen and (min-width: map-get($breakpoint, "normal_2")) {
+      @content;
+    }
+  } @else if $media == desktop {
+    @media screen and (min-width: map-get($breakpoint, "normal_1")) {
+      @content;
+    }
+  } @else if $media == tablet {
+    @media screen and (min-width: map-get($breakpoint, "medium_1")) {
+      @content;
+    }
+  }
+}

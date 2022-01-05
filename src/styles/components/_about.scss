@@ -1,0 +1,171 @@
+@keyframes RocketHover {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+  }
+  10% {
+    transform: translate3d(0, rem(-10), 0) scale(1.01) rotate();
+  }
+  30% {
+    transform: translate3d(rem(-10), rem(-15), 0) scale(1) rotate(1deg);
+  }
+  40% {
+    transform: translate3d(rem(-5), rem(-10), 0) scale(.98) rotate(1deg);
+  }
+  60% {
+    transform: translate3d(rem(5), 0, 0) scale(1) rotate(0deg);
+  }
+  70% {
+    transform: translate3d(rem(10), rem(5), 0) scale(1.01) rotate(-1deg);
+  }
+  90% {
+    transform: translate3d(rem(5), rem(0), 0) scale(1) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes RocketTruster {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  20% {
+    transform: scale(.96);
+    opacity: .8;
+  }
+  40% {
+    transform: scale(1);
+    opacity: .9;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  60% {
+    transform: scale(1);
+    opacity: .9;
+  }
+  80% {
+    transform: scale(.95);
+    opacity: .8;
+  }
+  90% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.ml-about {
+  padding: rem(111) 0 0 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: $ui_color_body_bg;
+    background: linear-gradient(180deg, $ui_color_body_bg_alt 0.8%, $ui_color_body_bg 99.2%);
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: column;
+    margin: rem(15) auto rem(30);
+    padding: 0 rem(30);
+ 
+    @include screenSize('tablet') {
+      flex-flow: row;
+    }
+  }
+
+  &__box {
+    order: 2;
+    margin: rem(-20) 0 0;
+    text-align: center;
+ 
+    @include screenSize('tablet') {
+      order: 1;
+      flex: 1;
+      text-align: left;
+    }
+  }
+
+  &__title {
+    margin: 0 0 rem(30);
+    line-height: rem(38);
+    font-size: rem(32);
+    font-weight: 500;
+    text-shadow: 0 0 rem(90) $ui_color_text_shadow;
+ 
+    @include screenSize('tablet') {
+      margin: 0 0 rem(40);
+      line-height: rem(65);
+      font-size: rem(65);
+    }
+  }
+
+  &__description {
+    margin: 0 0 rem(40);
+    line-height: rem(32);
+    font-size: rem(18);
+    color: $ui_color_text_alt;
+ 
+    @include screenSize('tablet') {
+      line-height: rem(40);
+      font-size: rem(22);
+    }
+  }
+
+  &__visual {
+    order: 1;
+    position: relative;
+ 
+    @include screenSize('tablet') {
+      order: 2;
+      flex: 1;
+    }
+
+    &__bg {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+    }
+
+    &__rocket {
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      animation: RocketHover linear 21s infinite;
+    }
+    
+    &__shadow {
+      position: absolute;
+      z-index: 1;
+      left: 58%;
+      top: 69%;
+      width: 30%;
+      animation: RocketTruster linear 3s infinite;
+    }
+    
+    &__body {
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      top: 0;
+    }
+  }
+}

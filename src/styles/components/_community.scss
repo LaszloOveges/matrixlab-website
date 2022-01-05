@@ -1,0 +1,135 @@
+.ml-community {
+
+  &__content {
+    margin: rem(30) auto;
+    max-width: rem(1168);
+  }
+
+  &__title {
+    margin: 0 auto;
+    max-width: rem(860);
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: rem(30);
+    margin: rem(60) 0;
+ 
+    @include screenSize('tablet') {
+      justify-content: space-between;
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__item {
+ 
+    @include screenSize('tablet') {
+      flex: 1;
+      width: auto;
+    }
+
+    & > * {
+      margin: 0 auto;
+      max-width: rem(205);
+    }
+
+    &__icon {
+      $icon: &;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      margin: rem(9);
+      width: rem(72);
+      height: rem(72);
+      border-radius: 50%;
+      box-shadow: 0 0 rem(15) 0 $ui_color_block_shadow_alt;
+    
+      &__gradient-border {
+        position: absolute;
+        z-index: 0;
+        display: inline-flex;
+        padding: rem(7 + 2);
+        width: rem(90);
+        height: rem(90);
+        border-radius: 50%;
+        box-shadow: 0 0 rem(15) 0 $ui_color_block_shadow_alt;
+        filter: blur(rem(1));
+        
+        &:before {
+          content: '';
+          position: absolute;
+          z-index: 0;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          padding: rem(2);
+          border-radius: 50%;
+          -webkit-mask: 
+             linear-gradient(black 0 0) content-box, 
+             linear-gradient(black 0 0);
+          -webkit-mask-composite: destination-out;
+          mask-composite: exclude;
+        }
+      }
+
+      &--telegram,
+      &--telegram #{$icon}__gradient-border::before {
+        @include SocialBackgroundGradient('telegram');
+      }
+
+      &--twitter,
+      &--twitter #{$icon}__gradient-border::before {
+        @include SocialBackgroundGradient('twitter');
+      }
+
+      &--discord,
+      &--discord #{$icon}__gradient-border::before {
+        @include SocialBackgroundGradient('discord');
+      }
+
+      &--github,
+      &--github #{$icon}__gradient-border::before {
+        @include SocialBackgroundGradient('github');
+      }
+
+      &--medium,
+      &--medium #{$icon}__gradient-border::before {
+        @include SocialBackgroundGradient('medium');
+      }
+
+      svg {
+        max-height: rem(36);
+      }
+    }
+
+    &__title {
+      margin: rem(20) 0 0;
+      line-height: rem(34);
+      font-size: rem(22);
+      font-weight: 500;
+    }
+
+    &__description {
+      margin: rem(15) 0 0;
+      color: $ui_color_text_alt;
+      line-height: rem(22);
+      font-size: rem(16);
+    }
+  }
+
+  &__card {
+    z-index: 1;
+    padding: rem(30) rem(20) rem(35);
+    text-decoration: none;
+    transition: all .15s ease 0s;
+
+    &:hover {
+      z-index: 2;
+      filter: brightness(1.2);
+      transform: scale(1.04) translate3d(0, rem(-5), 0);
+    }
+  }
+}

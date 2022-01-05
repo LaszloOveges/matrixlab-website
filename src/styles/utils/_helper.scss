@@ -1,0 +1,13 @@
+.ml-helper {
+  
+  &__only-mobile {
+
+    @include screenSize('tablet') {
+      display: none !important;
+    }
+  }
+
+  &__hidden {
+    display: none !important;
+  }
+}

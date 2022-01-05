@@ -1,0 +1,246 @@
+.ml-menu {
+  $menu: &;
+  user-select: none;
+
+  &__list {
+ 
+    @include screenSize('tablet') {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: rem(10);
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding: rem(10) 0;
+ 
+    @include screenSize('tablet') {
+      padding: 0;
+    }
+  }
+
+  &__indicator {
+    display: none;
+    margin: 0 rem(-22) 0 rem(2);
+    width: rem(20);
+    fill: $ui_color_text;
+    vertical-align: middle;
+    opacity: 0.25;
+  }
+
+  &__sublist {
+    position: relative;
+    margin: rem(30) 0 0;
+    padding: rem(30) 0 0;
+ 
+    @include screenSize('tablet') {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: rem(1);
+      background-color: $ui_color_spacer;
+ 
+      @include screenSize('tablet') {
+        display: none;
+      }
+    }
+  }
+
+  &__subitem {
+    display: inline-flex;
+    width: 100%;
+    border-radius: rem(10);
+    text-align: left;
+    opacity: .5;
+    transition: all .15s ease 0s;
+ 
+    @include screenSize('tablet') {
+      width: 50%;
+      opacity: 1;
+    }
+
+    #{$menu}__link {
+      flex-flow: row-reverse;
+      padding: rem(14);
+      font-size: rem(14);
+      line-height: rem(20);
+      text-align: right;
+ 
+      @include screenSize('tablet') {
+        flex-flow: row;
+        font-size: rem(16);
+        line-height: rem(24);
+        text-align: left;
+
+        &:hover,
+        &:hover * {
+          color: inherit;
+        }
+      }
+    }
+
+    &:hover {
+ 
+      @include screenSize('tablet') {
+        background-color: $ui_color_dropdown_hover_bg;
+      }
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: rem(10) rem(20);
+    width: 100%;
+    font-size: rem(24);
+    line-height: rem(30);
+    text-decoration: none;
+ 
+    @include screenSize('tablet') {
+      font-size: rem(16);
+      line-height: rem(20);
+    }
+  }
+
+  &__icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 rem(16);
+    width: rem(16);
+    height: rem(16);
+    border-radius: 50%;
+ 
+    @include screenSize('tablet') {
+      margin: 0 rem(16) 0 0;
+      width: rem(50);
+      height: rem(50);
+      box-shadow: 0 0 rem(15) 0 $ui_color_block_shadow_alt;
+      
+      &--telegram {
+        @include CommunityColor('telegram');
+      }
+  
+      &--twitter {
+        @include CommunityColor('twitter');
+      }
+  
+      &--discord {
+        @include CommunityColor('discord');
+      }
+  
+      &--github {
+        @include CommunityColor('github');
+      }
+  
+      &--medium {
+        @include CommunityColor('medium');
+      }
+  
+      &--blog {
+        @include CommunityColor('blog');
+      }
+  
+      &--announcement {
+        @include CommunityColor('announcement');
+      }
+  
+      &--whitepaper {
+        @include CommunityColor('whitepaper');
+      }
+  
+      &--buy {
+        @include CommunityColor('buy');
+      }
+    }
+
+    svg {
+      max-height: rem(12);
+
+      @include screenSize('tablet') {
+        max-height: rem(20);
+      }
+    }
+  }
+
+  &__text {
+    flex: 1;
+  }
+}
+
+.ml-menu-button {
+  $menuButton: &;
+  position: relative;
+  display: inline-block;
+  width: rem(30);
+  height: rem(23);
+  transform: rotate(0deg);
+  transition: all .3s ease 0s;
+  cursor: pointer;
+  
+  span {
+    display: block;
+    position: absolute;
+    left: 0;
+    height: rem(3);
+    width: 100%;
+    background: $ui_color_text;
+    border-radius: rem(1);
+    opacity: 1;
+    transform: rotate(0deg);
+    transition: all .15s ease 0s;
+  }
+  
+  span:nth-child(1) {
+    top: 0;
+  }
+  
+  span:nth-child(2),
+  span:nth-child(3) {
+    top: rem(10);
+  }
+  
+  span:nth-child(4) {
+    top: rem(20);
+  }
+  
+  &--active {
+    z-index: 101;
+  }
+  
+  &--active span {
+    background: $ui_color_dialog_close;
+  }
+
+  &--active span:nth-child(1) {
+    top: rem(10);
+    left: 50%;
+    width: 0%;
+  }
+  
+  &--active span:nth-child(2) {
+    transform: rotate(45deg);
+  }
+  
+  &--active span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+  
+  &--active span:nth-child(4) {
+    top: rem(10);
+    left: 50%;
+    width: 0%;
+  }
+}

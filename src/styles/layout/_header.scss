@@ -1,0 +1,155 @@
+.ml-header {
+  $header: &;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  transition: all .3s ease 0s;
+ 
+  @include screenSize('tablet') {
+
+  }
+ 
+  @include screenSize('desktop') {
+
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all .3s ease 0s;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(12);
+    padding: rem(30) rem(24);
+    transition: all .3s ease 0s, padding-top 0s;
+ 
+    @include screenSize('tablet') {
+      padding: rem(30);
+    }
+  }
+
+  &__logo {
+    position: relative;
+    width: 20%;
+    order: 1;
+ 
+    @include screenSize('tablet') {
+      width: 25%;
+    }
+
+    &__box {
+      position: relative;
+      display: inline-flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    &__svg {
+
+      &--icon {
+        margin: rem(2) 0;
+        width: rem(46);
+        min-width: rem(46);
+        cursor: pointer;
+ 
+        @include screenSize('tablet') {
+          margin: 0;
+          width: rem(50);
+          min-width: rem(50);
+        }
+      }
+
+      &--text-matrix {
+        display: none;
+        padding: 0 0 0 rem(17);
+        transition: all .3s ease 0s;
+ 
+        @include screenSize('desktop') {
+          display: inline-block;
+          cursor: pointer;
+        }
+      }
+
+      &--text-labs {
+        display: none;
+        padding: 0 0 0 rem(7);
+        transition: transform .2s ease-out .05s, opacity .15s ease-out .1s;
+ 
+        @include screenSize('desktop') {
+          display: inline-block;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &__menu {
+    width: 20%;
+    text-align: right;
+    order: 3;
+ 
+    @include screenSize('tablet') {
+      order: 2;
+      width: 50%;
+      text-align: center;
+    }
+  }
+
+  &__action {
+    width: 60%;
+    order: 2;
+    text-align: center;
+ 
+    @include screenSize('tablet') {
+      order: 3;
+      width: 25%;
+      text-align: right;
+    }
+  }
+
+  &--sticky {
+    position: fixed;
+
+    #{$header}__bg {
+      background-color: $ui_color_header_bg;
+      box-shadow: 0 rem(10) rem(20) 0 $ui_color_header_shadow;
+      backdrop-filter: blur(5px);
+    }
+
+    #{$header}__content {
+      padding: rem(10) rem(24);
+ 
+      @include screenSize('tablet') {
+        padding: rem(10) rem(30);
+      }
+    }
+
+    #{$header}__logo {
+  
+      &__svg {
+  
+        &--text-matrix {
+          opacity: 0;
+          transform: translateX(rem(-5));
+          transition: all .3s ease .1s;
+          cursor: default;
+        }
+  
+        &--text-labs {
+          opacity: 0;
+          transform: translateX(rem(-30));
+          transition: transform .2s ease-in 0s, opacity .15s ease-in 0s;
+          cursor: default;
+        }
+      }
+    }
+  }
+}

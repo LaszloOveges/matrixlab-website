@@ -1,0 +1,17 @@
+body {
+    font-size: rem(map-get($typo, "size"));
+}
+
+body * {
+    font-family: '#{map-get($typo, "font")}';
+}
+
+.ml-typo {
+
+    &--highlight,
+    &--highlight * {
+        font-size: inherit;
+        font-family: '#{map-get($font, "overpass")}';
+        font-weight: 500;
+    }
+}

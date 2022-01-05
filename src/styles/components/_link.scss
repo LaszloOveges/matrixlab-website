@@ -1,0 +1,15 @@
+.ml-link {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+
+  &,
+  & * {
+    transition: all .2s ease 0s;
+  }
+
+  &:hover,
+  &:hover * {
+    color: $ui_color_link_hover;
+  }
+}

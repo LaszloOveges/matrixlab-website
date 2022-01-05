@@ -1,0 +1,208 @@
+@use "sass:color";
+
+@import "./function";
+
+// FONTS
+$font: (
+  'overpass': 'Overpass',
+  'work': 'Work Sans',
+);
+
+// TYPO
+$typo: (
+  'font': map-get($font, 'work'),
+  'size': 16,
+  'weight': 400,
+);
+
+// BREAKPOINTS
+$breakpoint: (
+  'high_3': 3840px,
+  'high_2': 2560px,
+  'high_1': 1920px,
+  'normal_3': 1650px,
+  'normal_2': 1280px,
+  'normal_1': 1024px,
+  'medium_3': 960px,
+  'medium_2': 872px,
+  'medium_1': 768px,
+  'low_3': 640px,
+  'low_2': 480px,
+  'low_1': 360px,
+);
+
+// Z-INDEX
+$z-index: (
+  'header': 25,
+);
+
+// COLORS
+// Colors must be in HSL(A)
+// For themes, switch from scss props to css properties
+
+// Base colors:
+$color_deepBlack: hsla(220, 100%, 1%, 1);
+$color_deepTeal: hsl(202, 94%, 6%);
+$color_richBlack: hsla(196, 80%, 6%, 1);
+$color_blueBlack: hsl(197, 78%, 11%);
+$color_blueishBlack: hsl(197, 83%, 6%);
+$color_darkTeal: hsl(195, 80%, 8%);
+$color_darkerTeal: hsl(195, 77%, 11%);
+$color_potionBlue: hsl(195, 55%, 26%);
+$color_potionBlueish: hsl(194, 57%, 18%);
+$color_shadedBlue: hsl(202, 48%, 16%);
+$color_darkGreen: hsl(132, 44%, 11%);
+$color_yellowGreen: hsl(123, 90%, 32%);
+$color_yellowishGreen: hsl(123, 89%, 38%);
+$color_veryGreen: hsl(123, 72%, 56%);
+$color_cyanGreen: hsl(137, 89%, 44%);
+$color_cyanishGreen: hsl(137, 98%, 54%);
+$color_lightBlue: hsl(176, 88%, 41%);
+$color_lightishBlue: hsl(176, 85%, 51%);
+$color_featherBlue: hsl(177, 86%, 44%);
+$color_whiteBlue: hsl(194, 41%, 95%);
+$color_steelGrey: hsl(166, 8%, 40%);
+$color_ashGrey: hsl(213, 8%, 56%);
+$color_featherGrey: hsla(234, 17%, 43%, 1);
+$color_silverWhite: hsla(214, 17%, 78%, 1);
+$color_pureWhite: hsla(0, 0%, 100%, 1);
+
+// UI colors:
+$ui_color_text: $color_pureWhite;
+$ui_color_text_alt: $color_silverWhite;
+$ui_color_note: $color_ashGrey;
+$ui_color_link_hover: $color_cyanGreen;
+$ui_color_body_bg: $color_deepBlack;
+$ui_color_body_bg_alt: $color_richBlack;
+$ui_color_progress_bg: $color_cyanGreen;
+$ui_color_spacer: $color_potionBlueish;
+$ui_color_input: $color_darkTeal;
+$ui_color_input_bg: $color_pureWhite;
+$ui_color_dropdown: $color_steelGrey;
+$ui_color_dropdown_bg: $color_pureWhite;
+$ui_color_dropdown_shadow: $color_potionBlue;
+$ui_color_dropdown_hover_bg: $color_whiteBlue;
+$ui_color_dialog_close: $color_veryGreen;
+$ui_color_dialog_shadow: color.adjust($color_deepBlack, $alpha: -0.3);
+$ui_color_launch_panel_bg: color.adjust($color_deepTeal, $alpha: -0.3);
+$ui_color_launch_panel_border: color.adjust($color_deepTeal, $alpha: -0.1);
+$ui_color_header_bg: color.adjust($color_blueishBlack, $alpha: -0.3);
+$ui_color_header_shadow: color.adjust($color_deepBlack, $alpha: -0.7);
+$ui_color_text_shadow: color.adjust($color_deepBlack, $alpha: -0.7);
+$ui_color_button_hover_bg: color.adjust($color_pureWhite, $alpha: -0.6);
+$ui_color_button_alt_hover_bg: color.adjust($color_pureWhite, $alpha: -0.8);
+$ui_color_block_shadow: color.adjust($color_veryGreen, $alpha: -0.7);
+$ui_color_block_shadow_alt: color.adjust($color_veryGreen, $alpha: -0.9);
+$ui_color_card_inner_shadow: color.adjust($color_featherGrey, $alpha: -0.7);
+$ui_color_card_inner_shadow_alt: color.adjust($color_featherBlue, $alpha: -0.85);
+$ui_color_scrollbar_bg: color.adjust($color_deepBlack, $alpha: -0.7);
+$ui_color_scrollbar_bg_hover: $color_yellowGreen;
+$ui_color_scrollbar_track_bg: color.adjust($color_deepBlack, $alpha: -0.95);
+$ui_color_roadmap_dot: $color_deepBlack;
+$ui_color_roadmap_arrow: $color_shadedBlue;
+$ui_color_roadmap_group1: $color_lightBlue;
+$ui_color_roadmap_group1_shadow: color.adjust($color_lightBlue, $alpha: -0.5);
+$ui_color_roadmap_group2: $color_cyanGreen;
+$ui_color_roadmap_group2_shadow: color.adjust($color_cyanGreen, $alpha: -0.5);
+
+@mixin BackgroundGradient($deg: 265deg) {
+  background: linear-gradient($deg, 
+    $color_lightBlue 4.66%, 
+    $color_cyanGreen 51.89%, 
+    $color_yellowGreen 98.62%
+  );
+}
+
+@mixin BackgroundAltGradient($deg: 180deg) {
+  background: linear-gradient($deg, 
+    color.adjust($color_blueBlack, $alpha: -0.5) 0%,
+    color.adjust($color_blueishBlack, $alpha: -0.5) 100%
+  );
+}
+
+@mixin CardGradient($deg: 330deg) {
+  background: linear-gradient($deg, 
+    $color_darkTeal 0%,
+    $color_darkerTeal 100%
+  );
+  box-shadow: 
+    inset 0 rem(2) rem(20) 0 $ui_color_card_inner_shadow,
+    0 rem(15) rem(80) 0 $ui_color_card_inner_shadow_alt;
+}
+
+@mixin BigCardGradient {
+  background: radial-gradient( 
+    color.adjust($color_darkTeal, $alpha: -1) 50%,
+    $color_darkerTeal 100%
+  );
+}
+
+@mixin BorderGradient($deg: 280deg) {
+  background: linear-gradient($deg, 
+    $color_lightishBlue 16.14%, 
+    $color_cyanishGreen 49.3%,
+    $color_yellowishGreen 89.09%
+  );
+}
+
+@mixin TimelineGradient($deg: 90deg) {
+  background: linear-gradient($deg, 
+  color.adjust($color_lightBlue, $alpha: -1) 0, 
+  $color_lightBlue 25%,
+  $color_cyanGreen 75%,
+  color.adjust($color_cyanGreen, $alpha: -1) 100%
+  );
+}
+
+@mixin ImageBorderGradient($deg: 115deg) {
+  background: linear-gradient($deg, 
+  $color_yellowishGreen 0%,
+  color.adjust($color_cyanishGreen, $alpha: -0.70) 30%,
+  color.adjust($color_cyanishGreen, $alpha: -0.90) 60%,
+  color.adjust($color_cyanishGreen, $alpha: -0.66) 100%
+  );
+}
+
+@mixin TextGradient($deg: 280deg) {
+  display: inline-block;
+  background-color: $color_yellowishGreen;
+  background-image: linear-gradient($deg, 
+    $color_lightishBlue 16.14%, 
+    $color_cyanishGreen 49.3%,
+    $color_yellowishGreen 89.09%
+  );
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
+
+$socialBackground: (
+  'telegram': linear-gradient(234.03deg, hsl(185, 91%, 52%) 20.13%, hsl(185, 98%, 36%) 82.61%),
+  'twitter': linear-gradient(234.03deg, hsl(209, 89%, 55%) 20.13%, hsl(209, 98%, 36%) 82.61%),
+  'discord': linear-gradient(234.03deg, hsl(252, 90%, 65%) 20.13%, hsl(256, 76%, 46%) 82.61%),
+  'github': linear-gradient(234.03deg, hsl(259, 90%, 65%) 20.13%, hsl(266, 83%, 43%) 82.61%),
+  'medium': linear-gradient(234.03deg, hsl(270, 90%, 65%) 20.13%, hsl(274, 90%, 39%) 82.61%),
+);
+
+@mixin SocialBackgroundGradient($social: 'telegram') {
+  background: map-get($socialBackground, $social);
+}
+
+$communityColor: (
+  'telegram': hsla(198, 73%, 53%, 1),
+  'twitter': hsla(200, 68%, 55%, 1),
+  'discord': hsla(235, 86%, 65%, 1),
+  'github': hsla(262, 75%, 59%, 1),
+  'medium': hsla(196, 35%, 6%, 1),
+  'blog': hsla(346, 75%, 59%, 1),
+  'announcement': hsla(216, 77%, 57%, 1),
+  'whitepaper': hsla(36, 88%, 59%, 1),
+  'buy': hsla(145, 85%, 50%, 1),
+);
+
+@mixin CommunityColor($social: 'telegram') {
+  background: map-get($communityColor, $social);
+  box-shadow: 0 0 rem(10) 0 color.adjust(map-get($communityColor, $social), $alpha: -0.8);
+}

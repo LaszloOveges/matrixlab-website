@@ -1,0 +1,193 @@
+.ml-features {
+  $feature: &;
+
+  &__content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-flow: column;
+    gap: rem(32);
+    margin: rem(40) auto;
+    max-width: rem(480);
+ 
+    @include screenSize('tablet') {
+      flex-flow: row;
+      gap: rem(12);
+      margin: rem(100) auto 0;
+      max-width: rem(1168);
+    }
+  }
+
+  &__box {
+    order: 2;
+    width: 100%;
+    text-align: center;
+ 
+    @include screenSize('tablet') {
+      order: 1;
+      width: 50%;
+      text-align: left;
+    }
+  }
+
+  &__title {
+    margin: 0 0 rem(30);
+    font-size: rem(24);
+    line-height: rem(32);
+ 
+    @include screenSize('tablet') {
+      margin: 0 0 rem(40);
+      font-size: rem(40);
+      line-height: rem(55);
+      text-align: left;
+    }
+  }
+
+  &__description {
+    margin: rem(30) 0;
+    color: $ui_color_text_alt;
+    font-size: rem(16);
+    line-height: rem(30);
+  }
+
+  &__info {
+    display: inline-block;
+
+    &__item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: rem(20);
+      margin: rem(24) 0;
+      font-size: rem(18);
+      line-height: rem(30);
+
+      @include screenSize('tablet') {
+        margin: rem(24) 0;
+      }
+    }
+
+    &__icon {
+      margin: 0 auto;
+      width: rem(56);
+
+      @include screenSize('tablet') {
+        margin: 0;
+      }
+
+      &--wide {
+        width: auto;
+      }
+    }
+
+    &__text {
+
+    }
+  }
+
+  &__action {
+    margin: rem(40) 0 0;
+  }
+
+  &__visual {
+    order: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+ 
+    @include screenSize('tablet') {
+      order: 2;
+      justify-content: flex-end;
+      align-items: flex-start;
+      width: 50%;
+    }
+
+    & > * {
+      padding: 0 rem(48);
+      width: 100%;
+      height: 100%;
+      max-width: rem(450);
+ 
+      @include screenSize('tablet') {
+        padding: 0;
+      }
+    }
+  }
+
+  &--right {
+
+    #{$feature}__box {
+      order: 2;
+    }
+
+    #{$feature}__visual {
+      order: 1;
+ 
+      @include screenSize('tablet') {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+
+  // &__title {
+  //   margin: 0 auto;
+  //   max-width: rem(860);
+  // }
+
+  // &__list {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   gap: rem(25);
+  //   margin: rem(60) 0;
+  // }
+
+  // &__item {
+  //   flex: 1;
+  //   max-width: rem(365);
+
+  //   &__icon {
+  //     margin: 0 rem(-40);
+  //     height: rem(190);
+  //   }
+
+  //   &__title {
+  //     @include TextGradient;
+  //     margin: 0 rem(-10);
+  //     line-height: rem(30);
+  //     font-size: rem(22);
+  //   }
+
+  //   &__description {
+  //     margin: rem(15) 0 0;
+  //     color: $ui_color_text_alt;
+  //     line-height: rem(26);
+  //     font-size: rem(16);
+  //   }
+  // }
+
+  // &__card {
+  //   padding: rem(10) rem(32) rem(50);
+  // }
+}
+
+.ml-feature-swap {
+
+}
+
+.ml-feature-perp {
+
+}
+
+.ml-feature-zap {
+
+}
+
+.ml-feature-security {
+
+  .ml-features__visual > * {
+    max-width: rem(428);
+  }
+}

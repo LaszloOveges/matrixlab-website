@@ -1,0 +1,10 @@
+.ml-card {
+  @include CardGradient;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: rem(40) rem(30) rem(38);
+  height: 100%;
+  border-radius: rem(20);
+  text-align: center;
+}

@@ -1,0 +1,26 @@
+.ml-team {
+
+  &__content {
+    margin: rem(30) auto;
+    max-width: rem(1168);
+  }
+
+  &__title {
+    margin: 0 auto;
+    max-width: rem(860);
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: rem(25);
+    margin: rem(60) 0;
+  }
+
+  &__item {
+    width: 25%;
+    min-width: rem(200);
+    max-width: rem(258);
+  }
+}

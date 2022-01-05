@@ -1,0 +1,184 @@
+.ml-launch-panel {
+  $launch: &;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 1000;
+  background-color: $ui_color_launch_panel_bg;
+  backdrop-filter: blur(rem(10));
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: translate3d(0, -100%, 0);
+  transition: opacity .3s ease 0s, visibility 0s linear .3s, transform 0s linear .3s;
+
+  &__close {
+    position: absolute;
+    z-index: 3;
+    top: rem(30);
+    right: rem(30);
+    width: rem(30);
+    height: rem(30);
+    cursor: pointer;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    padding: rem(30); 
+    overflow: hidden;
+    overflow-y: auto;
+ 
+    @include screenSize('tablet') {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__list {
+ 
+    @include screenSize('tablet') {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    &:hover {
+
+      #{$launch}__item::before {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__item {
+    $item: &;
+    flex: 1;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    transform: translate3d(0, rem(-30), 0);
+    transition: transform .3s ease-in 0s;
+
+    &:not(:first-child)::before {
+
+      @include screenSize('tablet') {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: rem(30);
+        bottom: rem(30);
+        width: rem(2);
+        background-color: $ui_color_launch_panel_border;
+        border-radius: rem(2);
+        transition: all 300ms ease 0ms;
+      }
+    }
+
+    &__box {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      padding: rem(30);
+      background-color: transparent;
+      border-radius: rem(12);
+      transition: transform 300ms cubic-bezier(0.19,1,0.22,1) 0ms, background-color 300ms ease 0ms;
+
+      @include screenSize('tablet') {
+        height: 100%;
+        perspective: rem(300);
+      }
+    }
+
+    &__icon {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 0;
+      height: 0;
+      transition: transform 600ms cubic-bezier(0.17,0.84,0.44,1) 0ms;
+ 
+      @include screenSize('tablet') {
+        position: relative;
+        width: 100%;
+        height: rem(180);
+      }
+
+      & > svg {
+        height: 100%;
+      }
+    }
+
+    &__name {
+      @include TextGradient;
+      margin: rem(15) auto;
+      line-height: rem(36);
+      font-size: rem(28);
+ 
+      @include screenSize('tablet') {
+        margin: rem(15) auto 0;
+      }
+    }
+
+    &__description {
+      display: none;
+      margin: rem(15) auto rem(30);
+      width: 80%;
+      color: $ui_color_text_alt;
+      line-height: rem(22);
+      font-size: rem(16);
+      font-weight: 300;
+ 
+      @include screenSize('tablet') {
+        display: block;
+      }
+    }
+
+    &__action {
+      margin: auto 0 rem(15);
+    }
+
+    &:hover {
+
+      #{$item}__box {
+        background-color: $ui_color_launch_panel_bg;
+        transform: scale(1.05);
+      }
+
+      #{$item}__icon {
+        transform: rotate3d(1, 1, 1, 15deg) scale(.95);
+      }
+    }
+
+    &--disable {
+      cursor: default;
+
+      &:hover {
+        filter: grayscale(1);
+      }
+    }
+  }
+
+  &--active {
+    pointer-events: all;
+    visibility: visible;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: opacity .3s ease .2s, visibility 0s linear 0s, transform .6s cubic-bezier(0.19,1,0.22,1) 0s;
+
+    #{$launch}__item {
+      transform: translate3d(0, 0, 0);
+      transition: transform .6s cubic-bezier(0.39,0.57,0.56,1) .3s;
+
+      $itemCount: 3;
+      @for $i from 1 through $itemCount {
+        &:nth-child(#{$i}) {
+          transition-delay: (300 + (30 * $i)) * 1ms;
+        }
+      }
+    }
+  }
+}

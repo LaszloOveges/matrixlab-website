@@ -1,0 +1,48 @@
+html {
+  height: 100%;
+  font-size: map-get($typo, "size") * 1px;
+
+  @include screenSize('highres') {
+    font-size: (map-get($typo, "size") + 2) * 1px;
+  }
+}
+
+body,
+body * {
+  box-sizing: border-box;
+  color: $ui_color_text;
+}
+
+body {
+  position: relative;
+  height: auto;
+  background-color: $ui_color_body_bg;
+  line-height: inherit;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  ::-webkit-scrollbar {
+    width: rem(10);
+  }
+   
+  ::-webkit-scrollbar-track {
+    background-color: $ui_color_scrollbar_track_bg;
+    border-radius: rem(6);
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background-color: $ui_color_scrollbar_bg;
+    border-radius: rem(6);
+    transition: all .15s ease-in-out 0s;
+
+    &:hover {
+      background-color: $ui_color_scrollbar_bg_hover
+    }
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

@@ -1,0 +1,29 @@
+.ml-input {
+
+  &.MuiInput-root .MuiInput-input {
+    color: $ui_color_input;
+    background-color: $ui_color_input_bg;
+    padding: rem(10) rem(16);
+    min-width: rem(240);
+    min-height: rem(46);
+    border: none;
+    border-radius: rem(10);
+    outline: none;
+    font-size: rem(16);
+    line-height: rem(28);
+    transition: all .3s ease 0s;
+ 
+    @include screenSize('tablet') {
+      padding: rem(12) rem(19);
+      min-width: rem(320);
+      min-height: rem(50);
+      font-size: rem(16);
+      line-height: rem(28);
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: inset 0 0 0 rem(2) $ui_color_link_hover;
+    }
+  }
+}

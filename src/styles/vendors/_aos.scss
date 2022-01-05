@@ -1,0 +1,30 @@
+[data-aos='ml-fade-up'] {
+  opacity: 0;
+  transform: translateY(rem(30));
+  transition-property: transform, opacity;
+
+  &.aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+[data-aos='ml-slide-up'] {
+  visibility: visible;
+  transform: translateY(rem(30));
+  transition-property: transform;
+
+  &.aos-animate {
+    transform: translateY(0);
+  }
+}
+
+[data-aos='ml-slide-out'] {
+  visibility: visible;
+  transform: scale(1.2);
+  transition-property: transform;
+
+  &.aos-animate {
+    transform: translateZ(0) scale(1);
+  }
+}

@@ -1,0 +1,32 @@
+// Calculate units
+@use "sass:math";
+
+@function vw($pixel_value, $viewport_breakpoint : 1920) {
+
+  $vw_context: (math.div($viewport_breakpoint, $viewport_breakpoint * 0 + 1) * 0.01);
+
+  @return math.div(math.div($pixel_value, $pixel_value * 0 + 1), $vw_context) * 1vw;
+}
+
+@function vh($pixel_value, $viewport_breakpoint : 1080) {
+
+  $vh_context: (math.div($viewport_breakpoint, $viewport_breakpoint * 0 + 1) * 0.01);
+
+  @return math.div(math.div($pixel_value, $pixel_value * 0 + 1), $vh_context) * 1vh;
+}
+
+@function rem($pixel_value) {
+
+  @return math.div(math.div($pixel_value, $pixel_value * 0 + 1), map-get($typo, "size")) * 1rem;
+}
+
+@function em($pixel_value, $parent_value) {
+
+  @return math.div(math.div($pixel_value, $pixel_value * 0 + 1), math.div($parent_value, $parent_value * 0 + 1)) * 1em;
+}
+
+// Set image's path
+@function imgURL($image) {
+
+  @return url($i_path + $image);
+}

@@ -1,0 +1,138 @@
+@use "sass:math";
+
+@keyframes ButtonBorderSwirl {
+  $defaultValue: 280;
+  $stepCount: 30;
+  @for $i from 0 through $stepCount {
+    #{math.div(100, $stepCount) * $i * 1%} {
+      @include BorderGradient(($defaultValue + (math.div(360, $stepCount) * $i)) * 1deg);
+    } 
+  }
+}
+
+.ml-button {
+
+  &.MuiButtonBase-root {
+    @include BackgroundGradient;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+    padding: rem(8.5 + 1.5) rem(14.5 + 1.5);
+    min-width: rem(200);
+    min-height: rem(54);
+    border: none;
+    border-radius: rem(10);
+    box-shadow: 0 rem(5) rem(20) 0 $ui_color_block_shadow, 0 rem(5) rem(5) 0 $ui_color_block_shadow_alt;
+    line-height: rem(22);
+    font-size: rem(18);
+    font-family: map-get($font, 'work');
+    color: $ui_color_text;
+    text-transform: initial;
+    overflow: hidden;
+    cursor: pointer;
+ 
+    @include screenSize('tablet') {
+      padding: rem(10.5 + 1.5) rem(18.5 + 1.5);
+      min-height: rem(60);
+      line-height: rem(24);
+      font-size: rem(20);
+    }
+    
+    &::before {
+      @include BorderGradient;
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: rem(2);
+      border-radius: rem(10);
+      -webkit-mask: 
+         linear-gradient(black 0 0) content-box, 
+         linear-gradient(black 0 0);
+      -webkit-mask-composite: source-out;
+      mask-composite: exclude;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(105deg, 
+        transparent 0%, 
+        $ui_color_button_hover_bg 70%, 
+        transparent 100%
+      );
+      pointer-events: none;
+      transform: translate3d(-100%, 0, 0);
+      transition: all 0s ease 0s;
+    }
+
+    &:hover {
+
+      &::after {
+        transform: translate3d(100%, 0, 0);
+        transition: all .6s ease 0s;
+      }
+    }
+  }
+
+  &__icon {
+    margin: 0 0 0 rem(18);
+  }
+
+  &--small.MuiButtonBase-root {
+    padding: rem(8.5 + 1.5) rem(4.5 + 1.5);
+    min-width: rem(160);
+    min-height: rem(46);
+    line-height: rem(20);
+    font-size: rem(16);
+ 
+    @include screenSize('tablet') {
+      padding: rem(10.5 + 1.5) rem(6.5 + 1.5);
+      min-height: rem(50);
+      line-height: rem(20);
+      font-size: rem(16);
+    }
+  }
+
+  &--alt.MuiButtonBase-root {
+    @include BackgroundAltGradient;
+    backdrop-filter: blur(rem(3));
+
+    &::after {
+      background: linear-gradient(105deg, 
+        transparent 0%, 
+        $ui_color_button_alt_hover_bg 70%, 
+        transparent 100%
+      );
+    }
+
+    &:hover:before {
+      animation: ButtonBorderSwirl cubic-bezier(0.8, 0, 0.2, 1) .56s infinite;
+    }
+  }
+
+  &--disable.MuiButtonBase-root {
+    opacity: .5;
+    filter: grayscale(1) brightness(.5);
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+
+  &--launch.MuiButtonBase-root {
+    min-width: rem(140);
+ 
+    @include screenSize('tablet') {
+      min-width: rem(160);
+    }
+  }
+}

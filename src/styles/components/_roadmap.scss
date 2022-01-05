@@ -1,0 +1,157 @@
+.ml-roadmap {
+
+  &__content {
+    margin: rem(30) auto rem(90);
+    max-width: rem(1168);
+  }
+
+  &__title {
+    margin: 0 auto;
+    max-width: rem(860);
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    margin: rem(72) 0 0;
+    height: 100%;
+ 
+    @include screenSize('tablet') {
+      justify-content: flex-start;
+      flex-flow: column;
+      margin: 0;
+    }
+  }
+
+  &__timeline {
+    @include TimelineGradient(180deg);
+    position: relative;
+    margin: 0 rem(36) 0 0;
+    width: rem(6);
+    min-width: rem(6);
+    height: 100%;
+ 
+    @include screenSize('tablet') {
+      @include TimelineGradient;
+      margin: rem(122) auto 0;
+      width: 100%;
+      min-width: none;
+      height: rem(6);
+    }
+  }
+
+  &__milestones {
+    $milestones: &;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-flow: column;
+    gap: rem(38);
+ 
+    @include screenSize('tablet') {
+      flex-flow: row;
+    }
+
+    &__group {
+
+      &:nth-child(1) #{$milestones}__dot {
+        border-color: $ui_color_roadmap_group1;
+        box-shadow: 0 rem(3) rem(15) 0 $ui_color_roadmap_group1_shadow;
+      }
+
+      &:nth-child(2) #{$milestones}__dot {
+        border-color: $ui_color_roadmap_group2;
+        box-shadow: 0 rem(3) rem(15) 0 $ui_color_roadmap_group2_shadow;
+      }
+    }
+
+    &__mark {
+      margin: rem(-70) rem(38) rem(70 - 21 - 16);
+    }
+
+    &__date {
+      margin: 0;
+      font-size: rem(26);
+      line-height: rem(35);
+    }
+
+    &__dot {
+      position: relative;
+      margin: rem(40) 0 rem(-92) rem(-88);
+      width: rem(21);
+      height: rem(21);
+      background-color: $ui_color_roadmap_dot;
+      border: rem(4) solid $ui_color_roadmap_group1;
+      box-shadow: 0 rem(3) rem(15) 0 $ui_color_roadmap_group1_shadow;
+      border-radius: 50%;
+ 
+      @include screenSize('tablet') {
+        margin: rem(21) 0 0;
+      }
+    }
+
+    &__card {
+      position: relative;
+      max-width: rem(537);
+      text-align: left;
+  
+      &::before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        left: rem(-16);
+        top: rem(32);
+        width: 0; 
+        height: 0; 
+        border-top: rem(16) solid transparent;
+        border-right: rem(16) solid $ui_color_roadmap_arrow;
+        border-bottom: rem(16) solid transparent;
+ 
+        @include screenSize('tablet') {
+          left: rem(32);
+          top: rem(-16);
+          border-top: none;
+          border-left: rem(16) solid transparent;
+          border-right: rem(16) solid transparent;
+          border-bottom: rem(16) solid $ui_color_roadmap_arrow;
+        }
+      }
+    }
+
+    &__list {
+      margin: rem(-36) 0 0;
+ 
+      @include screenSize('tablet') {
+        margin: rem(-36) 0;
+      }
+    }
+
+    &__item {
+      display: flex;
+      margin: rem(36) 0;
+    }
+
+    &__status {
+      @include BackgroundGradient;
+      display: inline-flex;
+      position: relative;
+      margin: rem(7) rem(20) 0 0;
+      width: rem(13);
+      height: rem(13);
+      border-radius: 50%;
+      border: rem(1.5) solid $ui_color_button_alt_hover_bg;
+      box-shadow: 0 rem(3) rem(10) 0 $ui_color_block_shadow;
+      filter: grayscale(1) brightness(.8) opacity(.6);
+
+      &--active {
+        filter: none;
+      }
+    }
+
+    &__text {
+      flex: 1;
+      font-size: rem(18);
+      line-height: rem(26);
+    }
+  }
+}

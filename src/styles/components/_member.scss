@@ -1,0 +1,63 @@
+.ml-member {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: rem(30) rem(30) rem(38);
+
+  &__image {
+    position: relative;
+    margin: 0 rem(-40);
+    width: rem(146);
+    height: rem(146);
+
+    & > * {
+      object-fit: contain;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    img {
+      object-fit: cover;
+    }
+
+    &::before {
+      @include ImageBorderGradient;
+      content: '';
+      position: absolute;
+      left: rem(-3);
+      top: rem(-3);
+      right: rem(-3);
+      bottom: rem(-3);
+      border-radius: 50%;
+    }
+  }
+
+  &__name {
+    @include TextGradient;
+    margin: rem(20) rem(-20) rem(10);
+    line-height: rem(30);
+    font-size: rem(22);
+  }
+
+  &__position {
+    margin: 0 0 rem(20);
+    color: $ui_color_text;
+    line-height: rem(22);
+    font-size: rem(14);
+    letter-spacing: 5%;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    margin: auto 0 0;
+    
+    path {
+      transition: all .2s ease 0s;
+    }
+
+    &:hover path {
+      fill: $ui_color_link_hover;
+    }
+  }
+}
