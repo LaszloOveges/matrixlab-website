@@ -83,7 +83,7 @@ function MlApps({
   }
 
   const comingSoon = () => {
-    console.log(`Coming Soon`);
+    console.info(`Coming Soon`);
   }
 
   return (

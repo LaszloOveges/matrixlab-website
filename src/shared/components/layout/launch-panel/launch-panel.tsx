@@ -90,7 +90,7 @@ function MlLaunchPanel({
   }
 
   const comingSoon = () => {
-    console.log(`Coming Soon`);
+    console.info(`Coming Soon`);
   }
 
   return (

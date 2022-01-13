@@ -12,7 +12,7 @@ function MlFeatureZap({
 }: MlFeaturesProps): ReactElement {
 
   const launchApp = () => {
-    console.log(`Coming Soon`);
+    console.info(`Coming Soon`);
   }
 
   return (
