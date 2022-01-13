@@ -89,7 +89,8 @@ const menuItems: MlMenuItemsProps[] = [
   },
   {
     title: Translation.en.menupoint.learn,
-    link: ExternalRoutes.Menu.Blog,
+    link: Routes.Menu.Blog,
+    linkType: `internal`,
   },
   {
     title: Translation.en.menupoint.docs,

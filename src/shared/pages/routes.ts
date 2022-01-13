@@ -2,6 +2,8 @@ export const Routes = {
   Menu: {
     Landing: `/`,
     About: `/about`,
+    Blog: `/blog`,
+    BlogArticle: (slug: string) => (`/blog/${slug}`),
   },
   Legal: {
     PrivacyPolicy: `/privacy-policy`,

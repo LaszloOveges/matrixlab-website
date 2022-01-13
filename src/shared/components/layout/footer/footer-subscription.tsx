@@ -70,10 +70,10 @@ function MlFooterSubscription({
         if (response.ok) {
           setSubscribed(true);
         } else {
-          console.log(response.status)
+          console.info(response.status)
         }
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.info(err));
   };
   
   return (

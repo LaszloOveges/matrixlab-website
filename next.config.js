@@ -12,6 +12,9 @@ module.exports = withPlugins([
   [withBundleAnalyzer, { }],
 ], {
   reactStrictMode: true,
+  images: {
+    domains: ['uploads-ssl.webflow.com'],
+  },
   pwa: {
     disable: prod ? false : true,
     dest: 'public',

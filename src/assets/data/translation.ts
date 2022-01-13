@@ -53,6 +53,14 @@ export const Translation = {
       copyright: `Copyright`,
       allRightsReserved: `All rights reserved.`,
     },
+    blog: {
+      title: `Blog`,
+      description: `Musings of a decentralized cross-chain perpetual swap platform.`,
+      recommendedPosts: `More To Explore`,
+      allPosts: `All Posts`,
+      loadMore: `Load more posts`,
+      sharePost: `Share this post`,
+    },
     section: {
       intro: {
         title: `Redefining What’s Possible in Decentralized Finance`,

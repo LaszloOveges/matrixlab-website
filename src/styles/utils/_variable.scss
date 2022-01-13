@@ -6,6 +6,7 @@
 $font: (
   'overpass': 'Overpass',
   'work': 'Work Sans',
+  'dm': 'DM Sans',
 );
 
 // TYPO
@@ -50,6 +51,8 @@ $color_darkTeal: hsl(195, 80%, 8%);
 $color_darkerTeal: hsl(195, 77%, 11%);
 $color_potionBlue: hsl(195, 55%, 26%);
 $color_potionBlueish: hsl(194, 57%, 18%);
+$color_deelBlue: hsl(195, 15%, 18%);
+$color_deelBlueish: hsl(194, 11%, 24%);
 $color_shadedBlue: hsl(202, 48%, 16%);
 $color_darkGreen: hsl(132, 44%, 11%);
 $color_yellowGreen: hsl(123, 90%, 32%);
@@ -62,20 +65,35 @@ $color_lightishBlue: hsl(176, 85%, 51%);
 $color_featherBlue: hsl(177, 86%, 44%);
 $color_whiteBlue: hsl(194, 41%, 95%);
 $color_steelGrey: hsl(166, 8%, 40%);
+$color_cloudGrey: hsl(196, 30%, 85%);
+$color_noteGrey: hsl(196, 11%, 55%);
 $color_ashGrey: hsl(213, 8%, 56%);
 $color_featherGrey: hsla(234, 17%, 43%, 1);
+$color_powderGrey: rgb(228, 236, 233);
 $color_silverWhite: hsla(214, 17%, 78%, 1);
 $color_pureWhite: hsla(0, 0%, 100%, 1);
+
+$color_blog_category_1: hsla(47, 92%, 55%, 1);
+$color_blog_category_2: hsla(14, 87%, 62%, 1);
+$color_blog_category_3: hsla(252, 82%, 65%, 1);
+$color_blog_category_4: hsla(187, 72%, 56%, 1);
+$color_blog_category_5: rgb(92, 154, 247);
 
 // UI colors:
 $ui_color_text: $color_pureWhite;
 $ui_color_text_alt: $color_silverWhite;
+$ui_color_text_blog: $color_deelBlueish;
+$ui_color_text_blog_alt: $color_deelBlue;
+$ui_color_text_blog_note: $color_noteGrey;
 $ui_color_note: $color_ashGrey;
 $ui_color_link_hover: $color_cyanGreen;
 $ui_color_body_bg: $color_deepBlack;
 $ui_color_body_bg_alt: $color_richBlack;
+$ui_color_body_bg_blog: $color_pureWhite;
+$ui_color_body_img_bg: $color_powderGrey;
 $ui_color_progress_bg: $color_cyanGreen;
 $ui_color_spacer: $color_potionBlueish;
+$ui_color_spacer_blog: $color_cloudGrey;
 $ui_color_input: $color_darkTeal;
 $ui_color_input_bg: $color_pureWhite;
 $ui_color_dropdown: $color_steelGrey;

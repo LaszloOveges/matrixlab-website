@@ -14,13 +14,18 @@ export default class MyDocument extends Document {
           <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png" />
           <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#03161d" />
           <link rel="shortcut icon" href="/favicon.ico" />
-          <link rel="manifest" href="/manifest.json" /><link
+          <link rel="manifest" href="/manifest.json" />
+          <link
             href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;500;600&display=swap"
             rel="stylesheet"
           />
-          <link rel="manifest" href="/manifest.json" /><link
+          <link
             href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap"
             rel="stylesheet"
+          />
+          <link 
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" 
+            rel="stylesheet" 
           />
         </Head>
         <body>
