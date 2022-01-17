@@ -36,19 +36,19 @@ export async function getStaticPaths() {
   const blogPosts = JSON.parse(await fetchBlog());
 
   return {
-    paths: blogPosts.items.map((posts: WebFlowPostProps) => ({
+    paths: blogPosts?.items.map((posts: WebFlowPostProps) => ({
       params: {
         slug: posts.slug,
       },
     })),
-    fallback: true,
+    fallback: false,
   };
 }
 
 export async function getStaticProps({ params }: BlogArticlePathProps) {
   const blogCategories = JSON.parse(await fetchBlogCategories());
   const blogPosts = JSON.parse(await fetchBlog());
-  const blogPost = blogPosts.items.find((b: WebFlowPostProps) => b.slug === params.slug);
+  const blogPost = blogPosts?.items.find((b: WebFlowPostProps) => b.slug === params.slug);
   const recommendedPostCount = 3;
   const recommendedPosts = blogPosts.items
     .slice(0,(recommendedPostCount+1))

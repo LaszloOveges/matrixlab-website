@@ -64,22 +64,22 @@ export const Translation = {
     section: {
       intro: {
         title: `Redefining What’s Possible in Decentralized Finance`,
-        description: `Virtual AMM-based perpetual swaps trading protocol allowing up to 25x leverage and infinite on-chain liquidity.`,
+        description: `High liquidity multi-chain swaps, lightning-fast perpetual futures, & 1 click yields.`,
       },
       apps: {
-        title: `A suite of Defi protocols advancing the multichain evolution of Defi`,
+        title: `Explore our suite of Defi protocols`,
         swap: {
-          title: `Swap`,
-          description: `Swap & Trade quickly on Polygon, BSC and Avalanche.`,
+          title: `MatrixSwap`,
+          description: `Swap & trade quickly on Polygon, BSC, Avalanche, & Fantom.`,
           action: `Enter DEX Aggregator`,
         },
         perp: {
-          title: `Trade Perpetuals`,
-          description: `Start trading on derivatives on mainnet beta on Polygon.`,
+          title: `MatrixPerp`,
+          description: `Start trading derivatives on Polygon mainnet.`,
           action: `Trade on Mainnet Beta`,
         },
         zap: {
-          title: `Zapper`,
+          title: `MatrixZap`,
           description: `Instantly “Zap” all of your tokens into a farms and start earning rewards.`,
           action: ``,
         },
@@ -100,13 +100,13 @@ export const Translation = {
         },
         swap: {
           title: `Multiple chains. One decentralized exchange.`,
-          description: `We believe that multi-chain is the future of crypto. Our DEX Aggregator, MatrixSwap is currently available on three different blockchains - Polygon, Binance Smart Chain (BSC), and Avalanche. Aggregating over $3billion in liquidity, you can now swap your favorite tokens within these chains for the absolute best prices. We’ve also included some amazing features, too.`,
+          description: `MatrixSwap is currently available on four different chains - Polygon, BSC, Avalanche, and Fantom. Aggregating over $3billion in liquidity, you can now swap your favorite tokens within these four chains for the absolute best prices. Enjoy some unique features, too.`,
           multiToken: `Multi Token Swaps`,
           nukeButton: `Emergency Nuke Button`,
         },
         perp: {
           title: `Trade Perpetuals. Up to 25x Leverage.`,
-          description: `Using the power of Virtual AMMs (vAMMs), derivatives traders can leverage their favorite assets on Polygon with perfect price execution, low fees, and fast transactions. MatrixPerpetuals offers infinite on-chain liquidity and allows traders up to 25x leverage.`,
+          description: `Using the power of Virtual AMMs (vAMMs), derivatives traders can leverage their favorite assets on Polygon with perfect price execution, low fees, and fast transactions. MatrixPerp offers infinite on-chain liquidity and allows traders up to 25x leverage.`,
         },
         zap: {
           title: `Instantly “Zap” Your Tokens With 1 Click`,
