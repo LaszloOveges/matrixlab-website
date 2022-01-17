@@ -467,6 +467,10 @@
   text-decoration: none;
   cursor: pointer;
 
+  &:is(a) {
+    text-decoration: none;
+  }
+
   &::before {
     content: '';
     position: absolute;

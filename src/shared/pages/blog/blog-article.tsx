@@ -60,6 +60,6 @@ export async function getStaticProps({ params }: BlogArticlePathProps) {
       blogPost: blogPost,
       recommendedPosts: recommendedPosts,
     },
-    // revalidate: 60 * 10,
+    revalidate: 60 * 10,
   };
 }
