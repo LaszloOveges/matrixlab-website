@@ -101,6 +101,6 @@ export const getStaticProps: GetStaticProps<BlogFeedProps> = async () => {
       blogCategories,
       blogPosts,
     },
-    revalidate: 60 * 10,
+    // revalidate: 60 * 10,
   };
 };
