@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { ButtonBase } from '@mui/material';
 
-import Translation from '../../../../assets/data/translation';
+import Translation from '../../../data/translation';
 import IntroVisual from '../../../../assets/svg/visual/intro.svg';
 import Arrow from '../../../../assets/svg/icon/arrow.svg';
 import { ExternalRoutes } from '../../../pages/routes';

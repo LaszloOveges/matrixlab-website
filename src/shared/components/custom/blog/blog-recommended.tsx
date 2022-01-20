@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 
-import Translation from '../../../../assets/data/translation';
+import Translation from '../../../data/translation';
 import { animSlideUp } from '../../../config/anim';
 import { WebFlowResponseProps, WebFlowPostProps } from '../../../model/post';
 import MlBlogCard from './blog-card';

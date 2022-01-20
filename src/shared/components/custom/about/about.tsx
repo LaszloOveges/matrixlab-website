@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 
-import Translation from '../../../../assets/data/translation';
+import Translation from '../../../data/translation';
 import AboutBg from '../../../../assets/svg/visual/about-us-bg.svg';
 import AboutRocket from '../../../../assets/image/visual/about-us-rocket.png';
 import AboutRocketShadow from '../../../../assets/svg/visual/about-us-rocket-shadow.svg';

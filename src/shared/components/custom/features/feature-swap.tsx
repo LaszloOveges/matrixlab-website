@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { ButtonBase } from '@mui/material';
 
-import Translation from '../../../../assets/data/translation';
+import Translation from '../../../data/translation';
 import FeatureSwap from '../../../../assets/svg/visual/feature-swap.svg';
 import FeatureMultiSwap from '../../../../assets/svg/visual/feature-multi-swap.svg';
 import FeatureNukeButton from '../../../../assets/svg/visual/feature-nuke-button.svg';

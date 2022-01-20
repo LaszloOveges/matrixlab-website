@@ -79,6 +79,7 @@
 
   &__description {
     margin: rem(36) rem(20) rem(50);
+    max-width: rem(600);
     line-height: rem(32);
     font-size: rem(18);
     color: $ui_color_text_alt;

@@ -24,6 +24,7 @@
   }
 
   &__item {
+    cursor: pointer;
  
     @include screenSize('tablet') {
       flex: 1;
@@ -67,6 +68,27 @@
   }
 
   &__card {
+    transition: all .15s ease 0s;
 
+    .ml-button {
+      transition: all .15s ease 0s;
+    }
+
+    .ml-apps__item__icon {
+      transition: all .6s cubic-bezier(0.17,0.84,0.44,1) 0ms !important;
+    }
+
+    &:hover {
+      z-index: 2;
+      filter: brightness(1.2);
+
+      .ml-button:not(.ml-button--disable) {
+        filter: brightness(.8);
+      }
+      .ml-apps__item__icon {
+        transform: scale(1.15);
+        transition: all .2s cubic-bezier(0.17,0.84,0.44,1) 0ms !important;
+      }
+    }
   }
 }

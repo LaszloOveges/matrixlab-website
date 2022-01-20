@@ -103,6 +103,7 @@ $ui_color_dropdown_hover_bg: $color_whiteBlue;
 $ui_color_dialog_close: $color_veryGreen;
 $ui_color_dialog_shadow: color.adjust($color_deepBlack, $alpha: -0.3);
 $ui_color_launch_panel_bg: color.adjust($color_deepTeal, $alpha: -0.3);
+$ui_color_launch_panel_box_bg: color.adjust($color_deepTeal, $alpha: -0.25);
 $ui_color_launch_panel_border: color.adjust($color_deepTeal, $alpha: -0.1);
 $ui_color_header_bg: color.adjust($color_blueishBlack, $alpha: -0.3);
 $ui_color_header_shadow: color.adjust($color_deepBlack, $alpha: -0.7);

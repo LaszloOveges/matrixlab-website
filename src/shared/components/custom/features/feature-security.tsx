@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 
-import Translation from '../../../../assets/data/translation';
+import Translation from '../../../data/translation';
 import FeatureSecurity from '../../../../assets/svg/visual/feature-security.svg';
 import SecuredByHalborn from '../../../../assets/svg/visual/secured-halborn.svg';
 import { animSlideOut, animSlideUp, animFadeIn } from '../../../config/anim';

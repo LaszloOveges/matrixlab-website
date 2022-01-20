@@ -6,31 +6,22 @@ export const Routes = {
     BlogArticle: (slug: string) => (`/blog/${slug}`),
   },
   Legal: {
-    PrivacyPolicy: `/privacy-policy`,
-    TermsOfUse: `/terms-of-use`,
-    Legal: `/legal`,
+    PrivacyPolicy: `/document/privacy-policy`,
+    CookiePolicy: `/document/cookie-policy`,
+    TermsOfUse: `/document/terms-of-use`,
+    Disclaimer: `/document/disclaimer`,
   },
 };
 
 export const ExternalRoutes = {
   Menu: {
-    Faq: `https://docs.matrixswap.io/`,
-    Contact: `https://docs.matrixswap.io/`,
+    Faq: `https://docs.matrixswap.io/general/faq`,
+    Contact: `https://docs.matrixswap.io/general/official-matrixswap-links`,
     Whitepaper: `https://docs.matrixswap.io/`,
     Docs: `https://docs.matrixswap.io/`,
-    Blog: `https://www.matrixswap.io/blog`,
-    Learn: `https://www.matrixswap.io/blog`,
+    Learn: `https://docs.matrixswap.io/library/learning-center-and-blog`,
     Swap: `https://router.matrixswap.io/`,
     Perpetual: `https://perp.matrixswap.io/`,
-    // Faq: `//docs.matrixlab.io`,
-    // Contact: `//docs.matrixlab.io`,
-    // Whitepaper: `//docs.matrixlab.io`,
-    // Docs: `//docs.matrixlab.io`,
-    // Blog: `//blog.matrixlab.io`,
-    // Learn: `//blog.matrixlab.io`,
-    // Swap: `//router.matrixlab.io`,
-    // Perpetual: `//perp.matrixlab.io`,
-    // Zapper: `//zap.matrixlab.io`,
   },
   Social: {
     AnnouncementTelegram: `https://t.me/matrixswapexchange`,

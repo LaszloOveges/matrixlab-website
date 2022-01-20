@@ -27,6 +27,12 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" 
             rel="stylesheet" 
           />
+          <script 
+            type="text/javascript" 
+            src="https://app.termly.io/embed.min.js" 
+            data-auto-block="on" 
+            data-website-uuid="f7bf7328-d335-44a3-bd94-b974028ef8c0"
+          ></script>
         </Head>
         <body>
           <Main />

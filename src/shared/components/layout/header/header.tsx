@@ -3,7 +3,7 @@ import { ButtonBase } from '@mui/material';
 import Link from 'next/link';
 
 import MlMenu from '../menu/menu';
-import Translation from '../../../../assets/data/translation';
+import Translation from '../../../data/translation';
 import MatrixLabsIcon from '../../../../assets/svg/logo/matrixlabs-icon.svg';
 import MatrixLabsTextMatrix from '../../../../assets/svg/logo/matrixlabs-matrix.svg';
 import MatrixLabsTextLabs from '../../../../assets/svg/logo/matrixlabs-labs.svg';

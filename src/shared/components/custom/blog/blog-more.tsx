@@ -1,7 +1,7 @@
 import { ButtonBase } from '@mui/material';
 import React, { ReactElement } from 'react';
 
-import Translation from '../../../../assets/data/translation';
+import Translation from '../../../data/translation';
 
 export type MlBlogMoreProps = {
   loaded: number;

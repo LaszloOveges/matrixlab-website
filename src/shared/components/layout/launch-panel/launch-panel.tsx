@@ -1,7 +1,7 @@
 import React, { Fragment, ReactElement } from 'react';
 import { ButtonBase } from '@mui/material';
 
-import Translation from '../../../../assets/data/translation';
+import Translation from '../../../data/translation';
 import AppSwap from '../../../../assets/svg/visual/app-swap.svg';
 import AppPerp from '../../../../assets/svg/visual/app-perp.svg';
 import AppZap from '../../../../assets/svg/visual/app-zap.svg';
@@ -23,8 +23,8 @@ export type MlLaunchAAppItem = {
 
 const MlLaunchApp = ({index = 0, ...item}: MlLaunchAAppItem) => {
   return (
-    <li className={`ml-launch-panel__item${!item.active ? ` ml-launch-panel__item--disable` : ``}`} onClick={item.actionFunction}>
-      <div className='ml-launch-panel__item__box'>
+    <li className={`ml-launch-panel__item${!item.active ? ` ml-launch-panel__item--disable` : ``}`}>
+      <div className='ml-launch-panel__item__box' onClick={item.actionFunction}>
         <i className='ml-launch-panel__item__icon'>
           {item.icon}
         </i>
@@ -97,7 +97,10 @@ function MlLaunchPanel({
     <Fragment>
       <div className={`ml-section ml-launch-panel${active ? ` ml-launch-panel--active` : ``}`}>
         <i className='ml-launch-panel__close' onClick={() => closeLaunchPanel()}>
-          <CloseIcon className='ml-launch-panel__close__icon' />
+          <ButtonBase 
+            className='ml-button-icon ml-launch-panel__close__icon' 
+            children={<CloseIcon />}
+          />
         </i>
         <div className='ml-section__wrap ml-launch-panel__content'>
           <ul className='ml-launch-panel__list'>

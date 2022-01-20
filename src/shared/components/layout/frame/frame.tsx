@@ -4,7 +4,7 @@ import Head from 'next/head';
 import MlHeader from '../header/header';
 import MlFooter from '../footer/footer';
 import MlLaunchPanel from '../launch-panel/launch-panel';
-import Translation from '../../../../assets/data/translation';
+import Translation from '../../../data/translation';
 
 export enum MlSiteLayout {
   Landing = 'landing',

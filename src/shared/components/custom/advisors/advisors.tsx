@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import Image from 'next/image';
 
-import Translation from '../../../../assets/data/translation';
+import Translation from '../../../data/translation';
 import IconLinkedin from '../../../../assets/svg/social/linkedin.svg';
 import AdvisorDarius from '../../../../../public/assets/image/advisor/darius.png';
 import AdvisorBen from '../../../../../public/assets/image/advisor/ben.png';

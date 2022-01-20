@@ -136,3 +136,12 @@
     }
   }
 }
+
+.ml-button-icon {
+  padding: rem(10);
+  border-radius: 50%;
+
+  &--flip svg {
+    transform: rotate(180deg);
+  }
+}

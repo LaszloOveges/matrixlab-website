@@ -1,7 +1,7 @@
 import React, { Fragment, ReactElement, useState } from 'react';
 import { ButtonBase, InputUnstyled } from '@mui/material';
 
-import Translation from '../../../../assets/data/translation';
+import Translation from '../../../data/translation';
 import { animSlideUp } from '../../../config/anim';
 
 export interface MlFooterSubscriptionProps { }

@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 
-import Translation from '../../../../assets/data/translation';
+import Translation from '../../../data/translation';
 import { animSlideOut, animSlideUp } from '../../../config/anim';
 import { WebFlowPostProps } from '../../../model/post';
 

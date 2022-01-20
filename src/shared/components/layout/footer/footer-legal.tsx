@@ -2,7 +2,7 @@ import React, { Fragment, ReactElement } from 'react';
 
 import { MlFooterItemsProps } from './footer';
 import { Routes } from '../../../pages/routes';
-import Translation from '../../../../assets/data/translation';
+import Translation from '../../../data/translation';
 import { animSlideDown } from '../../../config/anim';
 
 export interface MlFooterLegalProps { }
@@ -17,8 +17,8 @@ const legalMenuItems: MlFooterItemsProps[] = [
     link: Routes.Legal.TermsOfUse,
   },
   {
-    title: Translation.en.menupoint.legal,
-    link: Routes.Legal.Legal,
+    title: Translation.en.menupoint.disclaimer,
+    link: Routes.Legal.Disclaimer,
   },
 ];
 

@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 
 import { animSlideUp } from '../../../config/anim';
 import { WebFlowPostProps } from '../../../model/post';
-import Translation from '../../../../assets/data/translation';
+import Translation from '../../../data/translation';
 import IconLinkedin from '../../../../assets/svg/social/linkedin.svg';
 import IconInstagram from '../../../../assets/svg/social/instagram.svg';
 import IconTwitter from '../../../../assets/svg/social/twitter.svg';

@@ -3,7 +3,7 @@ import { ClickAwayListener, useMediaQuery } from '@mui/material';
 import { UrlObject } from 'url';
 import Link from 'next/link';
 
-import Translation from '../../../../assets/data/translation';
+import Translation from '../../../data/translation';
 import { ExternalRoutes, Routes } from '../../../pages/routes';
 import Indicator from '../../../../assets/svg/icon/indicator.svg';
 import SocialTelegram from '../../../../assets/svg/social/telegram.svg';

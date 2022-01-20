@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import Image from 'next/image'
 
-import Translation from '../../../../assets/data/translation';
+import Translation from '../../../data/translation';
 import PartnerPolygon from '../../../../../public/assets/image/partner/polygon.png';
 import PartnerCardstarter from '../../../../../public/assets/image/partner/cardstarter.png';
 import PartnerKylin from '../../../../../public/assets/image/partner/kylin.png';
@@ -111,7 +111,6 @@ const MlPartner = ({index = 0, ...item}: MlPartnerItem) => {
             alt={item.name} 
             layout='fill' 
             loading='lazy' 
-            placeholder='blur' 
           />
       </i>
     </li>

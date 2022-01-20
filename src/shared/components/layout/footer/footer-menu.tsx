@@ -1,8 +1,8 @@
 import React, { Fragment, ReactElement } from 'react';
 
 import { MlFooterItemsProps } from './footer';
-import { ExternalRoutes } from '../../../pages/routes';
-import Translation from '../../../../assets/data/translation';
+import { Routes, ExternalRoutes } from '../../../pages/routes';
+import Translation from '../../../data/translation';
 import MatrixLabsLogo from '../../../../assets/svg/logo/matrixlabs-logo.svg';
 import SocialTelegram from '../../../../assets/svg/social/telegram.svg';
 import SocialTwitter from '../../../../assets/svg/social/twitter.svg';
@@ -19,7 +19,7 @@ const footerMenuItems: MlFooterItemsProps[] = [
     children: [
       {
         title: Translation.en.menupoint.blog,
-        link: ExternalRoutes.Menu.Blog,
+        link: Routes.Menu.Blog,
       },
       {
         title: Translation.en.menupoint.learn,

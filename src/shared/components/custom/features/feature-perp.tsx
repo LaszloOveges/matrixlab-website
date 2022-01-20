@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { ButtonBase } from '@mui/material';
 
-import Translation from '../../../../assets/data/translation';
+import Translation from '../../../data/translation';
 import FeaturePerp from '../../../../assets/svg/visual/feature-perp.svg';
 import { ExternalRoutes } from '../../../pages/routes';
 import { animSlideOut, animSlideUp, animFadeIn } from '../../../config/anim';

@@ -1,16 +1,17 @@
 import React, { ReactElement } from 'react';
 import Image from 'next/image';
 
-import Translation from '../../../../assets/data/translation';
+import Translation from '../../../data/translation';
 import IconLinkedin from '../../../../assets/svg/social/linkedin.svg';
 import TeamJoseph from '../../../../../public/assets/image/team/joseph.png';
 import TeamRyan from '../../../../../public/assets/image/team/ryan.png';
 import TeamYash from '../../../../../public/assets/image/team/yash.jpeg';
-import TeamKeith from '../../../../../public/assets/image/team/keith.png';
+import TeamKeith from '../../../../../public/assets/image/team/keith.jpg';
 import TeamVermont from '../../../../../public/assets/image/team/vermont.jpeg';
 import TeamLaszlo from '../../../../../public/assets/image/team/laszlo.jpeg';
 import TeamDanny from '../../../../../public/assets/image/team/danny.jpeg';
 import TeamGlenn from '../../../../../public/assets/image/team/glenn.png';
+import TeamIra from '../../../../../public/assets/image/team/ira.png';
 import { animSlideOut, animSlideUp } from '../../../config/anim';
 
 export type MlTeamProps = { }
@@ -70,6 +71,12 @@ const teamList: MlAdvisorItem[] = [
     name: `Glenn Bona`,
     position: `Content Contributor`,
     link: `https://www.linkedin.com/in/glennbona`,
+  },
+  {
+    image: TeamIra,
+    name: `Ira Masechko`,
+    position: `Designer`,
+    link: ``,
   },
 ];
 

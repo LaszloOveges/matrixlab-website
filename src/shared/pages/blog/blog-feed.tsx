@@ -5,7 +5,7 @@ import MlFrame from '../../components/layout/frame/frame'
 import MlBlogList from '../../components/custom/blog/blog-list'
 import { WebFlowResponseProps, WebFlowPostProps } from '../../model/post';
 import { fetchBlog, fetchBlogCategories } from '../../lib/blog';
-import Translation from '../../../assets/data/translation';
+import Translation from '../../data/translation';
 import MlBlogSelector from '../../components/custom/blog/blog-selector';
 import MlBlogMore from '../../components/custom/blog/blog-more';
 

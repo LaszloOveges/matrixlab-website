@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 
 import { ExternalRoutes } from '../../../pages/routes';
-import Translation from '../../../../assets/data/translation';
+import Translation from '../../../data/translation';
 import SocialTelegram from '../../../../assets/svg/social/telegram.svg';
 import SocialTwitter from '../../../../assets/svg/social/twitter.svg';
 import SocialDiscord from '../../../../assets/svg/social/discord.svg';

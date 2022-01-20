@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { ButtonBase } from '@mui/material';
 
-import Translation from '../../../../assets/data/translation';
+import Translation from '../../../data/translation';
 import AppSwap from '../../../../assets/svg/visual/app-swap.svg';
 import AppPerp from '../../../../assets/svg/visual/app-perp.svg';
 import AppZap from '../../../../assets/svg/visual/app-zap.svg';
@@ -23,7 +23,7 @@ export type MlAppItem = {
 const MlApp = ({index = 0, ...item}: MlAppItem) => {
   return (
     <li className='ml-apps__item' {...animSlideUp()}>
-      <div className='ml-card ml-apps__card'>
+      <div className='ml-card ml-apps__card' onClick={item.actionFunction}>
         <i className='ml-apps__item__icon' {...animSlideOut()}>
           {item.icon}
         </i>

@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 
-import Translation from '../../../../assets/data/translation';
+import Translation from '../../../data/translation';
 import VisiondBg from '../../../../assets/svg/visual/vision-bg.svg';
 import { animSlideUp, animSlideOut } from '../../../config/anim';
 

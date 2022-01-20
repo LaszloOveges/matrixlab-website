@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import Image from 'next/image'
 
-import Translation from '../../../../assets/data/translation';
+import Translation from '../../../data/translation';
 import InvestorSkyvision from '../../../../../public/assets/image/investor/skyvision-capital.png';
 import Investor4sv from '../../../../../public/assets/image/investor/4sv.png';
 import InvestorA195 from '../../../../../public/assets/image/investor/a195-capital.png';
@@ -75,7 +75,6 @@ const MlInvestor = (item: MlInvestorItem) => {
             alt={item.name} 
             layout='fill' 
             loading='lazy' 
-            placeholder='blur' 
           />
       </i>
     </li>
