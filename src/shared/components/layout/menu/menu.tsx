@@ -69,7 +69,7 @@ const menuItems: MlMenuItemsProps[] = [
       },
       {
         title: Translation.en.communityMenupoint.blog,
-        link: ExternalRoutes.Menu.Blog,
+        link: Routes.Menu.Blog,
         alias: `blog`,
         icon: <SocialBlog />,
       },
