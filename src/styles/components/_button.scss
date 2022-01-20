@@ -138,10 +138,13 @@
 }
 
 .ml-button-icon {
-  padding: rem(10);
-  border-radius: 50%;
 
-  &--flip svg {
+  &.MuiButtonBase-root {
+    padding: rem(10);
+    border-radius: 50%;
+  }
+
+  &--flip.MuiButtonBase-root svg {
     transform: rotate(180deg);
   }
 }
