@@ -22,6 +22,7 @@ export const ExternalRoutes = {
     Learn: `https://docs.matrixswap.io/library/learning-center-and-blog`,
     Swap: `https://router.matrixswap.io/`,
     Perpetual: `https://perp.matrixswap.io/`,
+    MediaKit: `https://drive.google.com/drive/folders/1LuYDTUUmhV-Eeay_femOV9aK8unnEaXR?usp=sharing`,
   },
   Social: {
     AnnouncementTelegram: `https://t.me/matrixswapexchange`,

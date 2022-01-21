@@ -29,6 +29,10 @@ const footerMenuItems: MlFooterItemsProps[] = [
         title: Translation.en.menupoint.technicalDocs,
         link: ExternalRoutes.Menu.Docs,
       },
+      {
+        title: Translation.en.menupoint.mediaKit,
+        link: ExternalRoutes.Menu.MediaKit,
+      },
     ],
   },
   {

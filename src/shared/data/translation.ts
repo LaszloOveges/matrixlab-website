@@ -6,8 +6,8 @@
 export const Translation = {
   en: {
     meta: {
-      title: `MatrixLabs`,
-      description: `Redefining What’s Possible in Decentralized Finance`,
+      title: `Matrix Labs`,
+      description: `High liquidity multi-chain swaps, lightning-fast perpetual futures, & 1 click yields.`,
     },
     common: {
       launchApp: `Launch App`,
@@ -27,6 +27,7 @@ export const Translation = {
       learn: `Learn`,
       docs: `Docs`,
       blog: `Blog`,
+      mediaKit: `Media Kit`,
       technicalDocs: `Technical Docs`,
       whitepaper: `Whitepaper`,
       faq: `FAQ`,
@@ -39,13 +40,13 @@ export const Translation = {
     },
     communityMenupoint: {
       twitter: `Visit Our Official Twitter Page`,
-      discord: `Join the MatrixLabs Community on Discord`,
+      discord: `Join the Matrix Labs Community on Discord`,
       medium: `Catch Up on Announcements in Our Medium Blog`,
-      telegram: `Join the Official MatrixLabs Telegram Channel`,
-      annTelegram: `MatrixLabs Announcement Telegram Channel`,
+      telegram: `Join the Official Matrix Labs Telegram Channel`,
+      annTelegram: `Matrix Labs Announcement Telegram Channel`,
       blog: `Catch Up on Our Latest Blog Posts`,
       learn: `Learn How to Buy $MATRIX Tokens`,
-      whitepaper: `Read the MatrixLabs Whitepaper`,
+      whitepaper: `Read the Matrix Labs Whitepaper`,
     },
     header: { },
     footer: {
@@ -56,7 +57,7 @@ export const Translation = {
     },
     blog: {
       title: `Blog`,
-      description: `Musings of a decentralized cross-chain perpetual swap platform.`,
+      description: `Learn more about Matrix Labs, DeFi, trading, and much more.`,
       recommendedPosts: `More To Explore`,
       allPosts: `All Posts`,
       loadMore: `Load more posts`,
@@ -121,7 +122,7 @@ export const Translation = {
       },
       about: {
         title: `About Us`,
-        description: `Matrix Labs is a multi-chain protocol offering unique Defi protocols featuring high liquidity swaps, perpetual futures trading, one-click farming, and a launchpad focused on top-tier Metaverse projects.`,
+        description: `Matrix Labs aims to build an ecosystem of DeFi products that currently features high liquidity swaps, perpetual futures trading, and one-click farming.`,
       },
       roadmap: {
         title: `Project Roadmap`,
@@ -132,12 +133,12 @@ export const Translation = {
           item4: `Emergency Nuke Button Deployment on Polygon`,
           item5: `Matrixswap MVP on Mumbai (Polygon) Testnet`,
           item6: `Trading Competition on Beta Mainnet`,
-          item7: `Limit Orders and Stop Loss for DEX Aggregator`,
-          item8: `BSC Integration into DEX Router`,
-          item9: `Avalanche Integration into DEX Router`,
-          item10: `Fantom Integration Into Matrixswap`,
-          item11: `Moonbeam Integration Into DEX router`,
-          item12: `Moonriver Integration Into DEX router`,
+          item7: `Limit Orders and Stop Loss for MatrixSwap`,
+          item8: `BSC Integration into MatrixSwap`,
+          item9: `Avalanche Integration into MatrixSwap`,
+          item10: `Fantom Integration Into MatrixSwap`,
+          item11: `Moonbeam Integration Into MatrixSwap`,
+          item12: `Moonriver Integration Into MatrixSwap`,
           item13: `Matrixswap Rebrand`,
           item14: `DeFi Self-Compounder (MatrixZap)`,
           item15: `Single Asset Staking`,
@@ -197,7 +198,7 @@ export const Translation = {
       social: {
         telegram: {
           title: `Telegram`,
-          description: `Connect With MatrixLabs’s Community`,
+          description: `Connect With Matrix Labs’s Community`,
         },
         twitter: {
           title: `Twitter`,
@@ -205,7 +206,7 @@ export const Translation = {
         },
         discord: {
           title: `Discord`,
-          description: `Get Involved With The MatrixLabs Team`,
+          description: `Get Involved With The Matrix Labs Team`,
         },
         github: {
           title: `Github`,

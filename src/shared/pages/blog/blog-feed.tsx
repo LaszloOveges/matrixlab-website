@@ -96,6 +96,8 @@ export const BlogFeed: NextPage<BlogFeedProps> = ({blogCategories, blogPosts}) =
 export const getStaticProps: GetStaticProps<BlogFeedProps> = async () => {
   const blogCategories = JSON.parse(await fetchBlogCategories());
   const blogPosts = JSON.parse(await fetchBlog());
+  const communityChallengeSlug = `community-challenge`;
+  blogCategories.items = blogCategories.items.filter((c: WebFlowPostProps) => c.slug !== communityChallengeSlug);
   return {
     props: {
       blogCategories,

@@ -26,7 +26,6 @@ export const Milestones: MlMilestonesGroup[] = [
     groupItems: [
       { name: Translation.en.section.roadmap.milestones.item5, status: MilestoneStatus.Achieved },
       { name: Translation.en.section.roadmap.milestones.item6, status: MilestoneStatus.Achieved },
-      { name: Translation.en.section.roadmap.milestones.item7, status: MilestoneStatus.Achieved },
       { name: Translation.en.section.roadmap.milestones.item8, status: MilestoneStatus.Achieved },
       { name: Translation.en.section.roadmap.milestones.item9, status: MilestoneStatus.Achieved },
     ],
@@ -50,6 +49,7 @@ export const Milestones: MlMilestonesGroup[] = [
       { name: Translation.en.section.roadmap.milestones.item18, status: MilestoneStatus.Planned },
       { name: Translation.en.section.roadmap.milestones.item19, status: MilestoneStatus.Planned },
       { name: Translation.en.section.roadmap.milestones.item20, status: MilestoneStatus.Planned },
+      { name: Translation.en.section.roadmap.milestones.item7, status: MilestoneStatus.Planned },
       { name: Translation.en.section.roadmap.milestones.item21, status: MilestoneStatus.Planned },
       { name: Translation.en.section.roadmap.milestones.item22, status: MilestoneStatus.Planned },
       { name: Translation.en.section.roadmap.milestones.item23, status: MilestoneStatus.Planned },
