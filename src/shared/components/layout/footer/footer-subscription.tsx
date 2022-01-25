@@ -1,6 +1,7 @@
 import React, { Fragment, ReactElement, useState } from 'react';
 import { ButtonBase, InputUnstyled } from '@mui/material';
 
+import * as ga from '../../../lib/google-analytics';
 import Translation from '../../../data/translation';
 import { animSlideUp } from '../../../config/anim';
 
@@ -53,12 +54,14 @@ function MlFooterSubscription({
     });
   }
   const subscribe = () => {
+    ga.event(`subscribe`, {event_category: `clicked`});
     setTouched(true);
     if (checkData()) {
       postData();
     }
   }
   const postData = async () => {
+    ga.event(`subscribe`, {event_category: `sent`});
     fetch(API_URL, {
       headers: {
         'Content-Type': 'application/json',
@@ -69,6 +72,7 @@ function MlFooterSubscription({
       .then((response) => {
         if (response.ok) {
           setSubscribed(true);
+          ga.event(`subscribe`, {event_category: `success`});
         } else {
           console.info(response.status)
         }

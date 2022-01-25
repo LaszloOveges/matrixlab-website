@@ -1,4 +1,5 @@
 .ml-dropdown {
+  @include DropdownGradient;
   position: absolute;
   z-index: 100;
   top: 100%;
@@ -8,9 +9,7 @@
   width: rem(700);
   max-width: 80vw;
   max-height: 80vh;
-  background: $ui_color_dropdown_bg;
   border-radius: rem(10);
-  box-shadow: 0 rem(20) rem(60) 0 $ui_color_dropdown_shadow;
   opacity: 0;
   pointer-events: none;
   transform: translate3d(-50%, rem(10), 0);
@@ -26,7 +25,7 @@
     height: 0; 
     border-left: rem(10) solid transparent;
     border-right: rem(10) solid transparent;
-    border-bottom: rem(10) solid $ui_color_dropdown_bg;
+    border-bottom: rem(10) solid $ui_color_dropdown_arrow;
     transform: translate3d(-50%, 0, 0);
   }
 

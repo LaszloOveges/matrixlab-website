@@ -198,7 +198,7 @@ export const Translation = {
       social: {
         telegram: {
           title: `Telegram`,
-          description: `Connect With Matrix Labs’s Community`,
+          description: `Connect With Matrix Labs’ Community`,
         },
         twitter: {
           title: `Twitter`,

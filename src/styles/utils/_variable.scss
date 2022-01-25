@@ -96,10 +96,9 @@ $ui_color_spacer: $color_potionBlueish;
 $ui_color_spacer_blog: $color_cloudGrey;
 $ui_color_input: $color_darkTeal;
 $ui_color_input_bg: $color_pureWhite;
-$ui_color_dropdown: $color_steelGrey;
-$ui_color_dropdown_bg: $color_pureWhite;
-$ui_color_dropdown_shadow: $color_potionBlue;
-$ui_color_dropdown_hover_bg: $color_whiteBlue;
+$ui_color_dropdown: $color_whiteBlue;
+$ui_color_dropdown_hover_bg: color.adjust($color_blueishBlack, $alpha: -0.3);
+$ui_color_dropdown_arrow: $color_blueBlack;
 $ui_color_dialog_close: $color_veryGreen;
 $ui_color_dialog_shadow: color.adjust($color_deepBlack, $alpha: -0.3);
 $ui_color_launch_panel_bg: color.adjust($color_deepTeal, $alpha: -0.3);
@@ -137,6 +136,16 @@ $ui_color_roadmap_group2_shadow: color.adjust($color_cyanGreen, $alpha: -0.5);
     color.adjust($color_blueBlack, $alpha: -0.5) 0%,
     color.adjust($color_blueishBlack, $alpha: -0.5) 100%
   );
+}
+
+@mixin DropdownGradient {
+  background: radial-gradient( 
+    color.adjust($color_blueBlack, $alpha: -0.05) 10%,
+    $color_blueBlack 90%,
+  );
+  box-shadow: 
+    inset 0 rem(2) rem(20) 0 $color_blueBlack,
+    0 rem(15) rem(80) 0 color.adjust($color_deepBlack, $alpha: -0.3);
 }
 
 @mixin CardGradient($deg: 330deg) {

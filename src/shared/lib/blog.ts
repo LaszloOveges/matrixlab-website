@@ -2,7 +2,7 @@ import {
   WebFlowPostProps, 
   WebFlowResponseProps,
 } from '../model/post';
-import WebflowRateLimiter from './rateLimiter';
+import WebflowRateLimiter from './rate-limiter';
 
 // WebFlow API limitations:
 // - the number of returned items is limited to 100

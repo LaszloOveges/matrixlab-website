@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 import { ButtonBase } from '@mui/material';
 
+import * as ga from '../../../lib/google-analytics';
 import Translation from '../../../data/translation';
 import AppSwap from '../../../../assets/svg/visual/app-swap.svg';
 import AppPerp from '../../../../assets/svg/visual/app-perp.svg';
@@ -70,20 +71,23 @@ function MlApps({
       name: Translation.en.section.apps.zap.title,
       description: Translation.en.section.apps.zap.description,
       actionText: Translation.en.common.comingSoon,
-      actionFunction: () => comingSoon(),
+      actionFunction: () => launchZap(),
     },
   ];
 
   const launchSwap = () => {
     window.open(ExternalRoutes.Menu.Swap, `_blank`);
+    ga.event(`launch_app`, {event_category: `swap`});
   }
 
   const launchPerp = () => {
     window.open(ExternalRoutes.Menu.Perpetual, `_blank`);
+    ga.event(`launch_app`, {event_category: `perp`});
   }
 
-  const comingSoon = () => {
+  const launchZap = () => {
     console.info(`Coming Soon`);
+    ga.event(`launch_app`, {event_category: `zap`});
   }
 
   return (

@@ -35,6 +35,7 @@
     "@svgr/webpack": "^6.1.2",
     "@types/aos": "^3.0.4",
     "@types/cors": "^2.8.12",
+    "@types/gtag.js": "0.0.8",
     "@types/node": "16.11.12",
     "@types/nprogress": "^0.2.0",
     "@types/react": "17.0.37",
