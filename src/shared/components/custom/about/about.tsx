@@ -31,7 +31,7 @@ function MlAbout({
               src={AboutRocket} 
               alt='Rocket' 
               layout='fill' 
-              loading='lazy' 
+              loading='eager' 
               placeholder='blur' 
               quality={100}
               className='ml-about__visual__body'

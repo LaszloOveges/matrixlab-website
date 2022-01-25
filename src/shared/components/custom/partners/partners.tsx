@@ -110,7 +110,7 @@ const MlPartner = ({index = 0, ...item}: MlPartnerItem) => {
             src={item.logo} 
             alt={item.name} 
             layout='fill' 
-            loading='lazy' 
+            loading='eager' 
           />
       </i>
     </li>

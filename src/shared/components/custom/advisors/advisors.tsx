@@ -71,7 +71,7 @@ function MlAdvisors({
                     alt={advisor.name} 
                     layout='fill' 
                     loading='lazy' 
-                    placeholder='blur' 
+                    placeholder='blur'
                   />
                 </i>
                 <h3 className='ml-member__name ml-typo--highlight'>
